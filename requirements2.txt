@@ -1,0 +1,26 @@
+
+pillow==8.2.0
+
+# pip把wheel下载到本地
+cd /home/saai/wheels
+python3.7 -m pip download pillow==8.2.0 -d ./ -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+
+# 自动识别平台
+sudo python3.7 -m pip download numpy==1.21.6 -d "/home/saai/wheels" -i https://pypi.tuna.tsinghua.edu.cn/simple
+# 手动指定平台
+sudo python3.7 -m pip download numpy==1.21.6 -d "/home/saai/wheels" --platform macosx-10_10_x86_64 -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+sudo python3.7 -m pip download ecnn -d "E:\Projects\PycharmProjects\QRCode_det\py_wheels" --platform linux_x86_64 -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+# conda把 包 下载到本地， 不安装, 下载路径: xx/anaconda3/pkgs/xx.tar.bz2
+conda install kornia --download-only
+
+
+# pip 强制安装本地包
+python3.7 -m pip install ./xxx.whl  --no-index --find-links=./
+
+# conda 安装本地包
+conda install --use-lcoal ./xxx.tar.bz2

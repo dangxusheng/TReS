@@ -4,7 +4,21 @@ import torch
 import torchvision
 import torchvision.transforms.functional as F
 import folders
+import numpy as np
+from PIL import Image
 
+
+"""
+fix run error: 
+	F.to_tensor(pic)
+	TypeError: __array__() takes 1 positional argument but 2 were given
+
+解决办法：
+	# 把pillow版本 降低到 8.2.0
+	pip uninstall pillow
+	pip install pillow==8.2.0
+
+"""
 
 class DataLoader(object):
 	"""

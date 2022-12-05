@@ -10,7 +10,7 @@ def Configs():
                         default='provid the path to the dataset', 
                         help='path to dataset')
     parser.add_argument('--dataset', dest='dataset', type=str, default='csiq',
-                        help='Support datasets: clive|koniq|fblive|live|csiq|tid2013')
+                        help='Support datasets: clive|koniq|fblive||csiq|tid2013')
     parser.add_argument('--svpath', dest='svpath', type=str,
                         default='path to save the results',
                         help='the path to save the info')
